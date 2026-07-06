@@ -2,28 +2,26 @@
 
 ![Agent Trace Lint cover](assets/readme-cover.svg)
 
-## What I keep this for
+## Working map
 
-Offline linting for AI agent tool-call traces.
+![Workflow diagram](assets/readme-diagram.svg)
 
-It is a small repo, so the README focuses on the path from clone to first useful output.
-
-## Clone and run
+## Run it
 
 ```bash
 git clone https://github.com/mertefekurt/agent-trace-lint.git
 cd agent-trace-lint
-python -m venv .venv
-source .venv/bin/activate
 python -m pip install -e ".[dev]"
 agent-trace-lint examples/broken-trace.json
-agent-trace-lint examples/broken-trace.json --json
 ```
 
-## Checks before changing it
+## What to notice
 
-```bash
-ruff check .
-pytest
-python -m agent_trace_lint --help
-```
+Offline linting for AI agent tool-call traces. It is a compact working note as much as a project: commands, file map, and the reasoning are kept close together.
+
+| Detail | Value |
+| --- | --- |
+| Area | model evaluation |
+| Entry | `agent-trace-lint` |
+| Input | JSON document |
+| Output | readable terminal output |
